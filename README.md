@@ -1,5 +1,4 @@
 # Import-JSON
-Import JSON file
 
 
 Download, install and activate "twentynineteen" theme from repo.
@@ -11,7 +10,6 @@ cd <path of  "twentynineteen" theme>
 
 
 ---------------------------- Tasks 1 ---------------------------- 
--------------
 Import Data
 -------------
 
@@ -19,7 +17,6 @@ For import all datas run   ./test/myscript.sh
 
 
 ---------------------------- Tasks 2 ---------------------------- 
-------------
 Show Data
 ------------
 
@@ -29,7 +26,6 @@ After saving, on front side you will see this http://prntscr.com/o9hf27
 
 
 ---------------------------- Tasks 3 ---------------------------- 
--------------
 Export Data
 ------------
 
