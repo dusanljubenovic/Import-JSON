@@ -2,11 +2,6 @@
 /**
  * Template Name: Events List Template
  *
- * Description: Use this page template for a page with a left sidebar.
- *
- * @package WordPress
- * @subpackage BuddyBoss
- * @since BuddyBoss 3.0
  */
 get_header();
 ?>
