@@ -35,6 +35,7 @@ http://prntscr.com/o9hl1y
 
 You will need to set your host and select the current date or any other day for which you would like to see sorted data
 
+Example url:
 http://localhost/wpclidemo.dev/wp-json/wp/v2/events?filter[meta_key]=time&filter[meta_compare]=%3E&filter[meta_value]=2019-07-01&filter[orderby]=meta_value&filter[order]=ASC&filter[posts_per_page]=100
 
 
