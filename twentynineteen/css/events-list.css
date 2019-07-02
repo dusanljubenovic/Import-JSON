@@ -1,0 +1,146 @@
+/*--------------------------------------------------------------
+Events List
+--------------------------------------------------------------*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-template-events-list .container{
+max-width:1200px;
+margin:0 auto;
+}
+
+
+.events_header{
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:40px;
+    position:relative;
+}
+.events_header:after{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:60px;
+    margin:0 auto;
+    background-color:#818181;
+    width:150px;
+    height:2px;
+    content:"";
+}
+
+.events_body{
+ display:flex;
+justify-content: space-between;
+}
+
+.events_holder{
+    padding:20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.events_holder:nth-child(2n){
+    background-color:#f8f8f8;
+}
+
+.events_name strong{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right:10px;
+}
+.events_name{
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+}
+
+.events_time{
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 18px;
+    color: #818181;
+}
+
+.events_time strong{
+    font-weight:500;
+    color:#1f1f1f;
+    margin-right:5px; 
+}
+
+.events_location strong,
+.events_address strong,
+.events_organization strong{
+    text-transform: lowercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color:#1f1f1f;
+    margin-right:5px;
+}
+
+.events_location{
+    text-align: right;
+}
+.events_location,
+.events_address,
+.events_organization{
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #818181;
+}
+
+.events_email strong{
+    text-transform: lowercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color:#1f1f1f;
+    margin-right:5px;
+}
+
+.events_email a{
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 18px;
+    color: #818181;
+    text-decoration: underline;
+}
+
+.pagination_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.pagination_holder a{
+    text-transform: lowercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #1f1f1f;
+   margin:0 5px;
+}
+
+.pagination_holder span{
+    text-transform: lowercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    background-color: #1f1f1f;
+    color:#fff;
+    padding:3px;
+    min-width: 30px;
+    text-align: center;
+    margin:0px 5px;
+}
