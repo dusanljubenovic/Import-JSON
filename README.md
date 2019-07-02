@@ -26,7 +26,7 @@ Create new page and choose "Events List Template" http://prntscr.com/o9hem3
 After saving, on the front side, you will see this http://prntscr.com/o9hf27
 
 ------------------------
-Tasks 3: Export Data
+Tasks 3 : Export Data
 ------------------------
 
 Accessed through a URL and sorted by timestamps
