@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Events List Tamplate
+ * Template Name: Events List Template
  *
  * Description: Use this page template for a page with a left sidebar.
  *
