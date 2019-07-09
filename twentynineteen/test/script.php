@@ -22,6 +22,12 @@ function import_events() {
        $number_updates=0;
        $number_new_events=0;
 
+       if ($event->isActive) :
+             $status="publish";
+         else :
+              $status="draft";
+         endif;
+
         if (get_post_status($event ->id)) {
 
             $number_updates++;
@@ -31,7 +37,7 @@ function import_events() {
             'post_content'      =>  $event ->about,
             'post_title'    => $event ->title,
             'post_type'     => 'events',
-            'post_status'   => 'publish',
+            'post_status'   => $status,
             );  
 
             if ( isset($event->organizer) ) {
@@ -52,10 +58,6 @@ function import_events() {
 
             if ( isset($event->longitude) ) {
             update_post_meta( $event ->id, 'longitude', $event->longitude );
-            }
-
-            if ( isset($event->isActive) ) {
-            update_post_meta( $event ->id, 'active', $event->isActive );
             }
 
             if ( isset($event->timestamp) ) {
@@ -80,7 +82,7 @@ function import_events() {
             'post_content'      =>  $event ->about,
             'post_title'    => $event ->title,
             'post_type'     => 'events',
-            'post_status'   => 'publish',
+            'post_status'   => $status,
             );  
 
              if ( isset($event->organizer) ) {
@@ -103,9 +105,6 @@ function import_events() {
               update_post_meta( $event ->id, 'longitude', $event->longitude );
               }
   
-              if ( isset($event->isActive) ) {
-              update_post_meta( $event ->id, 'active', $event->isActive );
-              }
   
               if ( isset($event->timestamp) ) {
               update_post_meta( $event ->id, 'time', $event->timestamp );

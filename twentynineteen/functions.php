@@ -401,7 +401,6 @@ add_action('save_post', 'save_datas');
 
 function admin_init(){
 	add_meta_box("meta-time", "Time", "meta_options_time", "events", "normal", "high");
-	add_meta_box("meta-active", "Active", "meta_options_active", "events", "normal", "high");
 	add_meta_box("meta-organizer", "Organizer", "meta_options_organizer", "events", "normal", "high");
 	add_meta_box("meta-email", "Email", "meta_options_email", "events", "normal", "high");
 	add_meta_box("meta-address", "Address", "meta_options_address", "events", "normal", "high");
@@ -453,16 +452,7 @@ function meta_options_longitude(){
 <input name="longitude" value="<?php echo $longitude; ?>" />
 <?php
 }
-function meta_options_active(){
-	global $post;
-	$custom = get_post_custom($post->ID);
-	$active = $custom[active][0];
 
-?>
-<input type="checkbox" name="active[]" value="<?php echo $active; ?>" <?php if ($active): ?>checked<?php endif; ?>  > Is Active?<br>
-
-<?php
-}
 
 function meta_options_time(){
 	global $post;
@@ -625,11 +615,11 @@ function get_post_meta_for_api_is_active( $object ) {
     //get the id of the post object array
 	$post_id = $object['id'];
 
-	if(get_post_meta( $post_id , 'active', false )[0][0]=="1" ) {
+	if(get_post_status( $post_id )=="publish" ) {
 		return "true";
 	}else{
 		return "false";
-	}
+	} 
 
 }
 

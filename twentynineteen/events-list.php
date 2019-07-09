@@ -18,25 +18,18 @@ get_header();
 
 
 			$args = array(
-				'post_type'              => 'events',
-                 'meta_query'             => array(
-					            'relation' => 'AND',
-                                 array(
-                                 'key'       => 'time',
-                                 'value'     => $today,
-                                 'compare'   => '>=',
+				'post_type'     =>   'events',
+                 'meta_query'   =>   array(
+                                      'key'       => 'time',
+                                      'value'     => $today,
+                                      'compare'   => '>=',
 								 ),
-								 array(
-									'key'     => 'active',
-									'value'   => true,
-									'compare' => '=',
-								),
-                 ),
                  'meta_key' => 'time',
                  'orderby'  => 'meta_value',
 				 'order'  => 'ASC',
 				 'posts_per_page' => 25,
-                   'paged' => $paged,
+				 'paged' => $paged,
+				 'post_status' => 'publish',
 			);  
 
 			$events = new WP_Query( $args );
